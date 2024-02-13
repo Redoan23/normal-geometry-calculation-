@@ -13,11 +13,11 @@
     <header>
 
     </header>
-    <main>
-        <div class="flex">
+    <main class="mx-auto max-w-[1950px] mt-10">
+        <div class="flex gap-3">
 
             <!-- shape card container -->
-            <div class="flex-1 grid grid-cols-1 md:grid-cols-3 gap-2">
+            <div class="flex-1 grid grid-cols-1 md:grid-cols-3 gap-3">
                 <!-- triangle card -->
                 <div class="card w-96 bg-base-100 shadow-xl">
                     <figure><img src="./images/triangle.png" alt="Triangle" />
@@ -37,36 +37,100 @@
                         </div>
                     </div>
                 </div>
-                <!-- triangle card -->
+                <!-- rectangle card -->
                 <div class="card w-96 bg-base-100 shadow-xl">
-                    <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
-                            alt="Shoes" />
+                    <figure><img src="./images/rectangle.png" alt="Triangle" />
                     </figure>
-                    <div class="card-body">
-                        <h2 class="card-title">Shoes!</h2>
-                        <p>If a dog chews shoes whose shoes does he choose?</p>
+                    <div class="card-body text-center">
+                        <h2 class="card-title mx-auto">Rectangle</h2>
+                        <p>Area (A) =  w X L</p>
+                        <div class="flex gap-2 justify-center items-center">
+                            <input type="text" id="rectangle-width" class="bg-slate-200 rounded-lg w-28 p-2"
+                                placeholder="w">cm
+                            <input type="text" id="rectangle-length" class="bg-slate-200 rounded-lg w-28 p-2" name=""
+                                placeholder="L"> cm
+                        </div>
                         <div class="card-actions justify-end">
-                            <button class="btn btn-primary">Buy Now</button>
+                            <button class="btn btn-primary w-full" onclick="calculationFunction()">Calculate</button>
                         </div>
                     </div>
                 </div>
-                <!-- triangle card -->
                 <div class="card w-96 bg-base-100 shadow-xl">
-                    <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
-                            alt="Shoes" />
+                    <figure><img src="./images/triangle.png" alt="Triangle" />
                     </figure>
-                    <div class="card-body">
-                        <h2 class="card-title">Shoes!</h2>
-                        <p>If a dog chews shoes whose shoes does he choose?</p>
+                    <div class="card-body text-center">
+                        <h2 class="card-title mx-auto">Triangle</h2>
+                        <p>Area (A) = 0.5 X b X h</p>
+                        <div class="flex gap-2 justify-center items-center">
+                            <input type="text" id="triangle-base" class="bg-slate-200 rounded-lg w-28 p-2"
+                                placeholder="b">cm
+                            <input type="text" id="triangle-height" class="bg-slate-200 rounded-lg w-28 p-2" name=""
+                                placeholder="h"> cm
+
+                        </div>
                         <div class="card-actions justify-end">
-                            <button class="btn btn-primary">Buy Now</button>
+                            <button class="btn btn-primary w-full" onclick="calculateTriangleArea()">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card w-96 bg-base-100 shadow-xl">
+                    <figure><img src="./images/triangle.png" alt="Triangle" />
+                    </figure>
+                    <div class="card-body text-center">
+                        <h2 class="card-title mx-auto">Triangle</h2>
+                        <p>Area (A) = 0.5 X b X h</p>
+                        <div class="flex gap-2 justify-center items-center">
+                            <input type="text" id="triangle-base" class="bg-slate-200 rounded-lg w-28 p-2"
+                                placeholder="b">cm
+                            <input type="text" id="triangle-height" class="bg-slate-200 rounded-lg w-28 p-2" name=""
+                                placeholder="h"> cm
+
+                        </div>
+                        <div class="card-actions justify-end">
+                            <button class="btn btn-primary w-full" onclick="calculateTriangleArea()">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card w-96 bg-base-100 shadow-xl">
+                    <figure><img src="./images/triangle.png" alt="Triangle" />
+                    </figure>
+                    <div class="card-body text-center">
+                        <h2 class="card-title mx-auto">Triangle</h2>
+                        <p>Area (A) = 0.5 X b X h</p>
+                        <div class="flex gap-2 justify-center items-center">
+                            <input type="text" id="triangle-base" class="bg-slate-200 rounded-lg w-28 p-2"
+                                placeholder="b">cm
+                            <input type="text" id="triangle-height" class="bg-slate-200 rounded-lg w-28 p-2" name=""
+                                placeholder="h"> cm
+
+                        </div>
+                        <div class="card-actions justify-end">
+                            <button class="btn btn-primary w-full" onclick="calculateTriangleArea()">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card w-96 bg-base-100 shadow-xl">
+                    <figure><img src="./images/triangle.png" alt="Triangle" />
+                    </figure>
+                    <div class="card-body text-center">
+                        <h2 class="card-title mx-auto">Triangle</h2>
+                        <p>Area (A) = 0.5 X b X h</p>
+                        <div class="flex gap-2 justify-center items-center">
+                            <input type="text" id="triangle-base" class="bg-slate-200 rounded-lg w-28 p-2"
+                                placeholder="b">cm
+                            <input type="text" id="triangle-height" class="bg-slate-200 rounded-lg w-28 p-2" name=""
+                                placeholder="h"> cm
+
+                        </div>
+                        <div class="card-actions justify-end">
+                            <button class="btn btn-primary w-full" onclick="calculateTriangleArea()">Calculate</button>
                         </div>
                     </div>
                 </div>
             </div>
 
             <!-- calculation part -->
-            <div class="w-96 border-2 shadow-lg">
+            <div class="w-80 border-2 shadow-lg">
                 <h3 class="text-4xl text-center">Area calculation</h3>
                 <div id="result"></div>
             </div>
@@ -74,6 +138,7 @@
     </main>
 
     <script src="./scripts/triangle-calculate.js"></script>
+    <script src="./scripts/rectangle.js"></script>
 </body>
 
 </html>

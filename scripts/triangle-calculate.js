@@ -11,3 +11,4 @@ function calculateTriangleArea(){
 
   document.getElementById('result').appendChild(p);
 }
+
